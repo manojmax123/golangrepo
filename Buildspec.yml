@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t jenkinsrepo .  
-      - docker tag jenkinsrepo:latest 125571554996.dkr.ecr.ap-south-1.amazonaws.com/jenkinsrepo:latest
+      - docker build -t golangrepo .
+      - docker tag golangrepo:latest 125571554996.dkr.ecr.ap-south-1.amazonaws.com/golangrepo:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 125571554996.dkr.ecr.ap-south-1.amazonaws.com/jenkinsrepo:latest
+      - docker push 125571554996.dkr.ecr.ap-south-1.amazonaws.com/golangrepo:latest
