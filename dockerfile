@@ -6,8 +6,6 @@ RUN go get github.com/golang/example/hello
 WORKDIR /go/src/github.com/golang/example/hello
 # Build the project and send the output to /bin/HelloWorld 
 RUN go build -o /bin/HelloWorld
-
-
 #Copy the build's output binary from the previous build container
-EXPOSE 80
 ENTRYPOINT ["/bin/HelloWorld"]
+EXPOSE 80
