@@ -9,10 +9,10 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t jenkinsdemo .
-      - docker tag jenkinsdemo:latest 125571554996.dkr.ecr.ap-south-1.amazonaws.com/jenkinsdemo:latest
+      - docker build -t demorepo .
+      - docker tag demorepo:latest 125571554996.dkr.ecr.ap-south-1.amazonaws.com/demorepo:latest
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 125571554996.dkr.ecr.ap-south-1.amazonaws.com/jenkinsdemo:latest
+      - docker push 125571554996.dkr.ecr.ap-south-1.amazonaws.com/demorepo:latest
